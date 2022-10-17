@@ -1,14 +1,14 @@
 # .NET 6 Docker Sample
 
-This sample have just one endpoint and demonstrates how to build a container image for .NET 6 webapps.
+This sample demonstrates how to build a container image for .NET 6 webapps.
 
 The sample builds an application in a [.NET SDK container](https://hub.docker.com/_/microsoft-dotnet-sdk/) and then copies the build result into a new image (the one you are building) based on the smaller [.NET Docker Runtime image](https://hub.docker.com/_/microsoft-dotnet-runtime/) or [.NET Docker ASP.NET Core Runtime image](https://hub.docker.com/_/microsoft-dotnet-aspnet/).
 
-The instructions assume that you have cloned this repo, have [Docker](https://www.docker.com/) installed, and have a command prompt open within the `App/` directory within the repo.
+The instructions assume that you have cloned this repo, have [Docker](https://www.docker.com/) installed, and have a command prompt open within the cloned repo directory.
 
 ## Try a pre-built version of the sample
 
-If want to skip ahead, you can try a pre-built version with the following command and access it in your web browser at `http://localhost:8080/weatherforecast` endpoint.
+If want to skip ahead, you can try a pre-built version with the following command and access it in your web browser at `http://localhost:8080` endpoint.
 
 ```console
 docker run --rm -it -p 8080:80 caiovcruz/dotnet-docker
@@ -33,7 +33,7 @@ Now listening on: http://[::]:80
 Application started. Press Ctrl+C to shut down.
 ```
 
-After the application starts, navigate to `http://localhost:8080/weatherforecast` in your web browser.
+After the application starts, navigate to `http://localhost:8080` in your web browser.
 
 > Note: The `-p` argument maps port 8080 on your local machine to port 80 in the container (the form of the port mapping is `host:container`). See the [Docker run reference](https://docs.docker.com/engine/reference/commandline/run/) for more information on command-line parameters. In some cases, you might see an error because the host port you select is already in use. Choose a different port in that case.
 
